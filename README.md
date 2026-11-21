@@ -1,4 +1,4 @@
-# Brew & Bloom Café Website
+# Vishal Food & Coffee Cafe Website
 
 Responsive single-page restaurant/cafe website built with HTML, CSS and JavaScript.
 
