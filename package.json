@@ -1,0 +1,14 @@
+{
+  "name": "food-coffee-cafe-backend",
+  "version": "1.0.0",
+  "description": "Node.js + Express + SQLite backend & database for a Food and Coffee Cafe website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  }
+}

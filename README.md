@@ -1,24 +1,30 @@
-# Vishal Food & Coffee Cafe Website
+# Food & Coffee Cafe — Backend & Database (Node.js + Express + SQLite)
 
-Responsive single-page restaurant/cafe website built with HTML, CSS and JavaScript.
+Is folder mein aapke HTML, CSS, aur JavaScript cafe frontend ke liye ek ready-to-run **Backend API** aur **SQLite Database** (`cafe.db`) setup diya gaya hai.
 
-## Includes
-- Responsive navigation
-- Cafe hero section and image gallery
-- Sample food and drink menu with prices
-- About/story section
-- Opening hours, contact details and demo enquiry form
-- Mobile-friendly layout
+## Files Included
+- `server.js` — Express REST API server (`http://localhost:5000`)
+- `db.js` — SQLite database connection, tables (`menu_items`, `orders`, `reservations`, `messages`), aur initial menu seeding
+- `package.json` — Dependencies (`express`, `cors`, `sqlite3`)
+- `frontend-integration-example.js` — Apne frontend JS se API call karne ka example code
 
-## Run
-Open `index.html` in a browser. Internet is needed for Google Fonts and remote Unsplash photos.
+## Kaise Chalayein (Setup Steps)
+1. Terminal / Command Prompt is folder mein open karein.
+2. Dependencies install karein:
+   ```bash
+   npm install
+   ```
+3. Server start karein:
+   ```bash
+   npm start
+   ```
+   Pehli baar run karne par `cafe.db` file apne aap ban jayegi aur sample coffee/food menu items insert ho jayenge.
 
-## Publish with GitHub Pages
-1. Create a GitHub repository.
-2. Upload `index.html` to the repository root.
-3. Go to Settings → Pages.
-4. Select Deploy from a branch → `main` → `/ (root)`, then Save.
-5. Wait for GitHub Pages to provide your live website URL.
-
-## Customize before publishing
-Replace the sample address, phone number, email, prices, opening hours and photos with the cafe's real details. The enquiry form is front-end demo only and does not send bookings.
+## API Endpoints
+- `GET /api/menu?category=Coffee` — Menu items fetch karein (`All`, `Coffee`, `Food`, `Dessert`)
+- `POST /api/menu` — Naya menu item add karein
+- `POST /api/orders` — Customer order save karein
+- `GET /api/orders` — Saare orders dekhein
+- `POST /api/reservations` — Table booking save karein
+- `GET /api/reservations` — Saari table bookings dekhein
+- `POST /api/messages` — Contact / feedback form message save karein
